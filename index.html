@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Robot Control</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+	</script>
+
+	<style>
+		.error {
+			color: #FF0000;
+		}
+
+		b {
+			font-weight: 500;
+		}
+	</style>
+</head>
+
+
+<body>
+
+
+
+	<div class="container container-sm container-md container-lg container-xl container-xxl border"
+		style="width:500px; margin-top:20px; margin-bottom:20px; padding-bottom: 20px;">
+
+		<form name="robotform">
+
+			<div class="col-xs col-sm col-md col-lg col-xl col-xxl">
+				<h2 class="text-center"><i class="fas fa-robot" style="color: #ff081a;"></i> Robot Control</h2>
+			</div>
+
+
+			<div class="col-xs col-sm col-md col-lg col-xl col-xxl">
+
+
+				<table class="table table-bordered table-striped table-hover table-sm">
+
+
+
+					<tbody>
+
+						<tr>
+							<td><b>Distance </b> </td>
+							<td>28.00</td>
+						</tr>
+
+						<tr>
+							<td><b>Metal Detection</b> </td>
+							<td>Yes</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="text-align:center; font-size:13px;">
+                                <span id="longitude"><b>Longitude: </b></span>
+                                <span id="latitude"><b>Latitude: </b></span>
+                            </td>
+						</tr>
+
+
+
+
+						<tr>
+							<td colspan="2" style="text-align:center; font-size:13px;"><b>Date:</b> 2021-12-20
+								<b>Time:</b> 11:46:16 </td>
+						</tr>
+
+					</tbody>
+
+
+				</table>
+
+			</div>
+
+			<div class="container mx-auto">
+
+				<div class="d-flex justify-content-center">
+					<div class="d-grid gap-2 d-md-block">
+						<button class="btn btn-primary btn-lg" name="forward" type="submit"> <i class="fas fa-forward"></i> Forward</button>
+					</div>
+				</div>
+
+				<div class="container">&nbsp;</div>
+
+				<div class="container">
+					<div class="d-flex justify-content-between">
+						<div class="d-grid gap-2 d-md-block">
+							<button class="btn btn-warning btn-lg" name="left" type="submit"> <i class="fas fa-angle-left"></i> Left</button>
+						</div>
+
+
+
+						<div class="d-grid gap-2 d-md-block">
+							<button class="btn btn-success btn-lg" name="stop" type="submit"> <i class="far fa-stop-circle"></i> Stop</button>
+						</div>
+
+
+
+						<div class="d-grid gap-2 d-md-block">
+							<button class="btn btn-warning btn-lg" name="right" type="submit"> Right <i class="fas fa-angle-right"></i> </button>
+						</div>
+
+
+					</div>
+
+				</div>
+
+				<div class="container">&nbsp;</div>
+
+				<div class="d-flex justify-content-center">
+					<div class="d-grid gap-2 d-md-block">
+						<button class="btn btn-primary btn-lg" name="backward"  type="submit"> <i class="fas fa-backward"></i> Backward</button>
+					</div>
+				</div>
+
+			</div>
+
+
+
+		</form>
+
+	</div>
+    <script type="text/javascript">
+        var lat="30.3573412";
+        var long="76.3604352";
+        document.getElementById("longitude").innerHTML += long;
+        document.getElementById("latitude").innerHTML += lat;
+	</script>
+</body>
+
+</html>
