@@ -65,13 +65,11 @@
                                 <span id="latitude"><b>Latitude: </b></span>
                             </td>
 						</tr>
-
-
-
-
 						<tr>
-							<td colspan="2" style="text-align:center; font-size:13px;"><b>Date:</b> 2021-12-20
-								<b>Time:</b> 11:46:16 </td>
+							<td colspan="2" style="text-align:center; font-size:13px;">
+                                <span id="date"><b>Date: </b></span>
+                                <span id="time"><b>Time: </b></span>
+                            </td>
 						</tr>
 
 					</tbody>
@@ -134,6 +132,17 @@
         var long="76.3604352";
         document.getElementById("longitude").innerHTML += long;
         document.getElementById("latitude").innerHTML += lat;
+        Date.prototype.today = function () { 
+            return this.getFullYear() +"-"+(((this.getMonth()+1) < 10)?"0":"") + (this.getMonth()+1)+"-"+((this.getDate() < 10)?"0":"") + this.getDate();
+        }
+
+        // For the time now
+        Date.prototype.timeNow = function () {
+            return ((this.getHours() < 10)?"0":"") + this.getHours() +":"+ ((this.getMinutes() < 10)?"0":"") + this.getMinutes() +":"+ ((this.getSeconds() < 10)?"0":"") + this.getSeconds();
+        }
+        var newDate = new Date();
+        document.getElementById("date").innerHTML += newDate.today();
+        document.getElementById("time").innerHTML += newDate.timeNow();
 	</script>
 </body>
 
